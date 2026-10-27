@@ -239,6 +239,33 @@
   const estimatorDuration = document.getElementById("estimatorDuration");
   const estimatorPrice = document.getElementById("estimatorPrice");
   const clearEstimatorBtn = document.getElementById("clearEstimatorBtn");
+  const bookSelectedLacquerBtn = document.getElementById("bookSelectedLacquerBtn");
+
+  function syncLacquerBookingLinks(items) {
+    const selectedIds = items.map((s) => s.id);
+    const targetHref =
+      selectedIds.length > 0
+        ? `/venice-nails-spa-orlando?services=${encodeURIComponent(selectedIds.join(","))}`
+        : "/venice-nails-spa-orlando";
+
+    if (bookSelectedLacquerBtn) {
+      bookSelectedLacquerBtn.setAttribute("href", targetHref);
+      bookSelectedLacquerBtn.textContent =
+        selectedIds.length > 0
+          ? `Book Selected on Lacquer (${selectedIds.length}) ->`
+          : "Book Selected on Lacquer ->";
+    }
+
+    document
+      .querySelectorAll('a[href*="lacquer.beauty/venice-nails-spa-orlando"], a[href^="/venice-nails-spa-orlando"]')
+      .forEach((a) => {
+        if (a === bookSelectedLacquerBtn) return;
+        a.setAttribute(
+          "href",
+          selectedIds.length > 0 ? targetHref : "https://lacquer.beauty/venice-nails-spa-orlando"
+        );
+      });
+  }
 
   function renderServices() {
     if (!ledgerGrid) return;
@@ -289,6 +316,7 @@
   function renderEstimator() {
     if (!estimatorList) return;
     const items = EXACT_SERVICES.filter((s) => selectedServiceIds.has(s.id));
+    syncLacquerBookingLinks(items);
     if (items.length === 0) {
       estimatorEmpty.hidden = false;
       estimatorTotals.hidden = true;
