@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <a class="skip-link" href="#atelier-stage">Skip to main content</a>
@@ -54,11 +54,7 @@
         </div>
 
         <nav class="rail-nav" aria-label="Section Index">
-          <a href="#lookbook-arc" class="rail-link active" data-section="lookbook-arc">
-            <span class="rail-link-shape shape-almond"></span>
-            <span>Nail-Tip Lookbook</span>
-          </a>
-          <a href="#service-matrix" class="rail-link" data-section="service-matrix">
+          <a href="#service-matrix" class="rail-link active" data-section="service-matrix">
             <span class="rail-link-shape shape-coffin"></span>
             <span>Services &amp; Booking</span>
           </a>
@@ -159,73 +155,60 @@
             </div>
           </div>
 
-          <!-- Interactive Sculpted Nail-Tip Fan Deck (Original Salon Photos) -->
+          <!-- Continuous Automatic Nail-Tip Roll (Fitting Card on Desktop & Mobile) -->
           <div class="nail-fan-console">
-            <div class="fan-toolbar">
-              <div class="fan-tabs" role="tablist" aria-label="Gallery View Switcher">
-                <button type="button" class="fan-tab active" data-fan-mode="nails" role="tab" aria-selected="true">
-                  Latest Nail Work
+            <div class="nail-roll-viewport">
+              <div class="nail-roll-track" id="nailTipDeck">
+                <!-- Primary Set of 6 Nail Photos -->
+                <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/hero-01.webp" data-caption="Venice Nails &amp; Spa — Pastel Mint, Violet &amp; Gold Glitter Swirl Coffin Set">
+                  <img src="assets/nailsites/hero-01.webp" alt="Pastel swirl coffin nails with gold glitter at Venice Nails &amp; Spa" width="320" height="420" fetchpriority="high" />
                 </button>
-                <button type="button" class="fan-tab" data-fan-mode="salon" role="tab" aria-selected="false">
-                  Salon &amp; Polish Center
+
+                <button type="button" class="nail-tip-card shape-almond-tip" data-lightbox="assets/nailsites/gallery-01.webp" data-caption="Venice Nails &amp; Spa — Glossy Nude-Pink Almond Set with White Line Art">
+                  <img src="assets/nailsites/gallery-01.webp" alt="Almond nude nails with white swirl French tip art" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/gallery-08.webp" data-caption="Venice Nails &amp; Spa — Warm Latte Coffin Set with Botanical Gold Leaf Art">
+                  <img src="assets/nailsites/gallery-08.webp" alt="Taupe coffin nails with botanical leaf and gold glitter art" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/gallery-05.webp" data-caption="Venice Nails &amp; Spa — Obsidian, Burnt Orange Glitter &amp; Gold Foil Coffin Set">
+                  <img src="assets/nailsites/gallery-05.webp" alt="Autumn black and orange foil coffin nail set" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-almond-tip" data-lightbox="assets/nailsites/gallery-04.webp" data-caption="Venice Nails &amp; Spa — Custom Hand-Painted Puzzle &amp; Polka-Dot Almond Art">
+                  <img src="assets/nailsites/gallery-04.webp" alt="Almond white nails with custom puzzle piece and polka dot nail art" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-squoval-tip" data-lightbox="assets/nailsites/gallery-03.webp" data-caption="Venice Nails &amp; Spa — Natural Squoval Butter-Yellow Gel Manicure">
+                  <img src="assets/nailsites/gallery-03.webp" alt="Natural short squoval nails in butter yellow gel polish" width="320" height="420" loading="eager" />
+                </button>
+
+                <!-- Seamless Loop Duplicate Set of 6 Nail Photos -->
+                <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/hero-01.webp" data-caption="Venice Nails &amp; Spa — Pastel Mint, Violet &amp; Gold Glitter Swirl Coffin Set" tabindex="-1" aria-hidden="true">
+                  <img src="assets/nailsites/hero-01.webp" alt="" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-almond-tip" data-lightbox="assets/nailsites/gallery-01.webp" data-caption="Venice Nails &amp; Spa — Glossy Nude-Pink Almond Set with White Line Art" tabindex="-1" aria-hidden="true">
+                  <img src="assets/nailsites/gallery-01.webp" alt="" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/gallery-08.webp" data-caption="Venice Nails &amp; Spa — Warm Latte Coffin Set with Botanical Gold Leaf Art" tabindex="-1" aria-hidden="true">
+                  <img src="assets/nailsites/gallery-08.webp" alt="" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/gallery-05.webp" data-caption="Venice Nails &amp; Spa — Obsidian, Burnt Orange Glitter &amp; Gold Foil Coffin Set" tabindex="-1" aria-hidden="true">
+                  <img src="assets/nailsites/gallery-05.webp" alt="" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-almond-tip" data-lightbox="assets/nailsites/gallery-04.webp" data-caption="Venice Nails &amp; Spa — Custom Hand-Painted Puzzle &amp; Polka-Dot Almond Art" tabindex="-1" aria-hidden="true">
+                  <img src="assets/nailsites/gallery-04.webp" alt="" width="320" height="420" loading="eager" />
+                </button>
+
+                <button type="button" class="nail-tip-card shape-squoval-tip" data-lightbox="assets/nailsites/gallery-03.webp" data-caption="Venice Nails &amp; Spa — Natural Squoval Butter-Yellow Gel Manicure" tabindex="-1" aria-hidden="true">
+                  <img src="assets/nailsites/gallery-03.webp" alt="" width="320" height="420" loading="eager" />
                 </button>
               </div>
-            </div>
-
-            <!-- 6 Original Nail Photos shaped as Almond, Coffin & Squoval Nail Tips -->
-            <div class="nail-tip-deck" id="nailTipDeck" data-mode="nails">
-              <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/hero-01.webp" data-caption="Venice Nails &amp; Spa — Pastel Mint, Violet &amp; Gold Glitter Swirl Coffin Set">
-                <img src="assets/nailsites/hero-01.webp" alt="Pastel swirl coffin nails with gold glitter at Venice Nails &amp; Spa" width="320" height="235" fetchpriority="high" />
-                <span class="tip-badge">Coffin Swirl</span>
-              </button>
-
-              <button type="button" class="nail-tip-card shape-almond-tip" data-lightbox="assets/nailsites/gallery-01.webp" data-caption="Venice Nails &amp; Spa — Glossy Nude-Pink Almond Set with White Line Art">
-                <img src="assets/nailsites/gallery-01.webp" alt="Almond nude nails with white swirl French tip art" width="260" height="235" loading="eager" />
-                <span class="tip-badge">Almond Line Art</span>
-              </button>
-
-              <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/gallery-08.webp" data-caption="Venice Nails &amp; Spa — Warm Latte Coffin Set with Botanical Gold Leaf Art">
-                <img src="assets/nailsites/gallery-08.webp" alt="Taupe coffin nails with botanical leaf and gold glitter art" width="300" height="235" loading="eager" />
-                <span class="tip-badge">Botanical Foil</span>
-              </button>
-
-              <button type="button" class="nail-tip-card shape-coffin-tip" data-lightbox="assets/nailsites/gallery-05.webp" data-caption="Venice Nails &amp; Spa — Obsidian, Burnt Orange Glitter &amp; Gold Foil Coffin Set">
-                <img src="assets/nailsites/gallery-05.webp" alt="Autumn black and orange foil coffin nail set" width="260" height="235" loading="lazy" />
-                <span class="tip-badge">Glitter &amp; Foil</span>
-              </button>
-
-              <button type="button" class="nail-tip-card shape-almond-tip" data-lightbox="assets/nailsites/gallery-04.webp" data-caption="Venice Nails &amp; Spa — Custom Hand-Painted Puzzle &amp; Polka-Dot Almond Art">
-                <img src="assets/nailsites/gallery-04.webp" alt="Almond white nails with custom puzzle piece and polka dot nail art" width="260" height="235" loading="lazy" />
-                <span class="tip-badge">Custom Art</span>
-              </button>
-
-              <button type="button" class="nail-tip-card shape-squoval-tip" data-lightbox="assets/nailsites/gallery-03.webp" data-caption="Venice Nails &amp; Spa — Natural Squoval Butter-Yellow Gel Manicure">
-                <img src="assets/nailsites/gallery-03.webp" alt="Natural short squoval nails in butter yellow gel polish" width="260" height="235" loading="lazy" />
-                <span class="tip-badge">Gel Polish</span>
-              </button>
-            </div>
-
-            <!-- 4 Original Salon Interior & Storefront Photos (Toggled or Scrolled) -->
-            <div class="salon-vitrine-deck hidden" id="salonVitrineDeck">
-              <button type="button" class="vitrine-card" data-lightbox="assets/nailsites/gallery-02.webp" data-caption="Venice Nails &amp; Spa — Luxury Pedicure Sanctuary with Crystal Basins &amp; Arched Stoneway">
-                <img src="assets/nailsites/gallery-02.webp" alt="Venice Nails &amp; Spa pedicure massage chairs and crystal basins" width="340" height="210" loading="eager" />
-                <span class="tip-badge">Pedicure Lounge</span>
-              </button>
-
-              <button type="button" class="vitrine-card" data-lightbox="assets/nailsites/gallery-07.webp" data-caption="Venice Nails &amp; Spa — 4-Wall Illuminated Polish Center &amp; Terrazzo Manicure Stations">
-                <img src="assets/nailsites/gallery-07.webp" alt="Venice Nails &amp; Spa Polish Center wall displays and manicure tables" width="340" height="210" loading="eager" />
-                <span class="tip-badge">Polish Center</span>
-              </button>
-
-              <button type="button" class="vitrine-card" data-lightbox="assets/nailsites/gallery-06.webp" data-caption="Venice Nails &amp; Spa — Reception Desk &amp; Stacked-Stone Archway (Cash Gratuity Preferred)">
-                <img src="assets/nailsites/gallery-06.webp" alt="Venice Nails &amp; Spa reception desk and stone pillars" width="340" height="210" loading="eager" />
-                <span class="tip-badge">Reception</span>
-              </button>
-
-              <button type="button" class="vitrine-card" data-lightbox="assets/nailsites/logo-01.webp" data-caption="Venice Nails &amp; Spa — 9971 Tagore Pl Ste# 5, Lake Nona Landing Storefront">
-                <img src="assets/nailsites/logo-01.webp" alt="Venice Nails &amp; Spa exterior storefront at 9971 Tagore Pl Ste# 5" width="300" height="210" loading="eager" />
-                <span class="tip-badge">9971 Tagore Pl #5</span>
-              </button>
             </div>
           </div>
         </div>
@@ -556,6 +539,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=5" defer></script>
+  <script src="script.js?v=6" defer></script>
 </body>
 </html>
