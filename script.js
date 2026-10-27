@@ -501,7 +501,6 @@
                 onerror="this.onerror=null;this.src='${esc(fallbackCdn)}';"
               />
               <span class="latest-date-pill">${esc(cleanDate)}</span>
-              <span class="latest-open-pill">Open Post -&gt;</span>
             </div>
             <div class="latest-card-body">
               <h3>${esc(cleanTitle)}</h3>

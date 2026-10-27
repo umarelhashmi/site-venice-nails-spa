@@ -197,7 +197,7 @@ button {
 .btn-book-primary {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
   padding: 12px 16px;
   border-radius: 999px;
@@ -226,7 +226,7 @@ button {
 .btn-call-rail {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 15px;
   border-radius: 999px;
   background: rgba(252, 232, 146, 0.06);
