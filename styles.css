@@ -433,6 +433,20 @@ button {
 }
 
 /* 4 Exact Services from nailsites.com */
+.favorites-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.favorites-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-venice);
+}
+
 .signature-quartet {
   display: grid;
   grid-template-columns: 1fr 1fr;
