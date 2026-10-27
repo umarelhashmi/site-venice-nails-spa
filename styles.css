@@ -1541,13 +1541,13 @@ button {
 
 @media (max-width: 1180px) {
   .lookbook-top-split {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .matrix-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .sanctuary-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
   .map-card {
     grid-column: 1 / -1;
@@ -1556,7 +1556,22 @@ button {
 
 @media (max-width: 960px) {
   .atelier-shell {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .atelier-stage,
+  .stage-lookbook,
+  .lookbook-top-split,
+  .identity-capsule,
+  .nail-fan-console,
+  .stage-matrix,
+  .matrix-layout,
+  .stage-latest,
+  .stage-proof,
+  .stage-sanctuary,
+  .sanctuary-grid {
+    min-inline-size: 0;
+    max-inline-size: 100%;
   }
 
   .atelier-rail {
